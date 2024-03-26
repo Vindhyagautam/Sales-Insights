@@ -73,12 +73,3 @@ inner join sales.markets
 on sales.transactions.market_code = sales.markets.markets_code
 where sales.markets.markets_name != 'New York' or sales.markets.markets_name != 'Paris';
 # The currency needs to fixed (transfered to doller), it will be done in Power Query in data cleaning stage
-
-
- 
-
- 
-
- 
-
- 
