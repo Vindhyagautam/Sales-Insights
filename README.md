@@ -11,7 +11,8 @@ Necessary Systems/ tools/ Platform: Sales Database, MySQL, Power BI Query, Power
 
 ![Screenshot 2024-03-26 144608](https://github.com/Vindhyagautam/Sales-Insights/assets/164732296/2070f0a0-5ac5-4908-857b-a535776fbac7)
 
-![Screenshot 2024-03-26 144608](https://github.com/Vindhyagautam/Sales-Insights/assets/164732296/2070f0a0-5ac5-4908-857b-a535776fbac7)
+![Screenshot 2024-03-26 145008](https://github.com/Vindhyagautam/Sales-Insights/assets/164732296/c615f5cf-4230-4aa4-ac49-9aea37bde7fb)
+
 
 DATA EXPLORING
 
