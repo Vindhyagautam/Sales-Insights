@@ -24,14 +24,14 @@ select * from sales.customers limit 100;
 desc sales.customers;
 select count(distinct customer_code), count(distinct custmer_name), count(distinct customer_type) from sales.customers;
 select distinct customer_type from sales.customers;
-# There are 38 different customers divided into two types: Brick & Mortar, E-commerce
+There are 38 different customers divided into two types: Brick & Mortar, E-commerce
 
 select * from sales.date limit 100;
 desc sales.date;
 select count(distinct date), count(distinct cy_date), count(distinct year), count(distinct month_name), count(distinct date_yy_mmm)
 from sales.date;
 select distinct year from sales.date;
-# This database shows the sales for 4 years: 2017, 2018, 2019, 2020
+This database shows the sales for 4 years: 2017, 2018, 2019, 2020
 
 select * from sales.markets limit 100;
 desc sales.markets;
@@ -39,9 +39,9 @@ select count(distinct markets_code), count(distinct markets_name), count(distinc
 select distinct markets_code from sales.markets;
 select distinct markets_name from sales.markets;
 select distinct zone from sales.markets;
-# There are 17 different markets/location (called by the city name) 15 cities/ markets in india and their codes are a sequence of 001 to 015,
-# and New York (Market Code 097) and Paris (Market Code 999). 
-# There are 4 zones: North, South, Center (applies for the indian markets) and Blank for New York and Paris
+There are 17 different markets/location (called by the city name) 15 cities/ markets in india and their codes are a sequence of 001 to 015,
+and New York (Market Code 097) and Paris (Market Code 999). 
+There are 4 zones: North, South, Center (applies for the indian markets) and Blank for New York and Paris
 
 select * from sales.products limit 100;
 desc sales.products;
@@ -52,15 +52,15 @@ select distinct product_type from sales.products;
 select * from sales.transactions limit 100;
 desc sales.transactions;
 select distinct currency from sales.transactions;
-# Transaction tables shows sales amount in two different currencies. This should be fixed and shows sales amount only in one currency.
-# All sales amount will be transfered to USD currency.
+Transaction tables shows sales amount in two different currencies. This should be fixed and shows sales amount only in one currency.
+All sales amount will be transfered to USD currency.
 
-# Let's explore the data of Paris and New York
+Let's explore the data of Paris and New York
 select * from sales.transactions 
 inner join sales.markets on sales.transactions.market_code = sales.markets.markets_code 
 where sales.markets.markets_code = 'New York' or sales.markets.markets_code  = 'Paris';
-# It shows no data for New York or Paris market, only the indian markets are shown.
-# So the sales insight will be done only for indian markets. 
+It shows no data for New York or Paris market, only the indian markets are shown.
+So the sales insight will be done only for indian markets. 
 DATA EXTRACTING
 
 Extract the data that I decided to use in csv format. Below is showing the SQL scripts to extract the data from the sales database
@@ -73,4 +73,4 @@ select * from sales.transactions
 inner join sales.markets 
 on sales.transactions.market_code = sales.markets.markets_code
 where sales.markets.markets_name != 'New York' or sales.markets.markets_name != 'Paris';
-# The currency needs to fixed (transfered to doller), it will be done in Power Query in data cleaning stage
+The currency needs to fixed (transfered to doller), it will be done in Power Query in data cleaning stage
